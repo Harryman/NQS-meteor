@@ -1,0 +1,21 @@
+<template name="MasterLayout">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no">
+    <div class="container">
+        <div class="ui pointing menu">
+            <a href="/" data-tab="/" class="item"><img src="/i/menuBarLogo.png" alt="Home">
+            </a>
+            <a href="/Events" data-tab="/Events" class="item"><i class="trophy icon"></i>Events</a>
+            <a href="/rules/Rules2015.pdf" data-tab="/Rules" class="item"><i class="list ui icon"></i>Rules</a>
+            <div class="right menu">
+                <div class="ui center dropdown item">More <i class="dropdown icon"></i>
+                    <div class="menu"><a href="/Archives" class="item"><i class="database icon"></i>Archives</a><a href="/About" class="item"><i class="info Circle icon"></i>About</a>
+                        <a href="/Contact" class="item"><i class="mail icon"></i>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {{> yield}}
+    </div>
+</template>

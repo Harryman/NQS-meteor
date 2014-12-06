@@ -1,0 +1,16 @@
+<template name="Events">
+    <div class="ui secondary segment">
+        <div class="ui grid">
+            <div class="right floated six wide column">
+                <input type="text" id="dateRange" value="{{yearMin}} - {{yearMax}}" readonly style="border:0; background-color:#FAF9FA; ">
+                <div id="dateSlider"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ui styled fluid accordion">
+    {{test}}
+    {{#each allEvents}}
+    	{{> Event}}
+    {{/each}}
+    </div>
+</template>
