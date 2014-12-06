@@ -27,6 +27,12 @@ Template.Event.helpers({
       out = out + " " + eDate.getDate();
     }
     out = out + ", " + sDate.getFullYear();
+    console.log("this._id")
+    console.log(this)
+    console.log(this._id)
+    console.log(this._id.str)
+    console.log(this._id._str)
+
     return out;
   }
 });

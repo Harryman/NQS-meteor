@@ -1,12 +1,15 @@
 <template name="Event">
-	<div class="title">
+	<div class="ui vertical segment">
+<a href="/Event/{{_id._str}}">
 		<div class="ui grid">
 			<div class="eight wide column">
-				{{city}}, {{state}}				
+				<h3>{{city}}, {{state}}</h3>
+				<div class="sub header">{{location}}</div>
 			</div>
 			<div class="right aligned eight wide column">
-				{{pullDate}}
+				<h3>{{pullDate}}</h3>
 			</div>
 		</div>
+	</a>
 	</div>
 </template>

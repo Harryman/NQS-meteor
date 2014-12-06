@@ -19,3 +19,4 @@ Router.route('/rules/:file',function(){
 	{
 		where:"server"
 	});
+Router.route('/event/:_id', {name: 'pull'});
