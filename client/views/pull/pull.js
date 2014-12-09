@@ -11,6 +11,18 @@ Template.Pull.events({
 });
 
 Template.Pull.helpers({
+  classConvert:function() {
+    var hmm = [];
+    if(this.classes){
+      this.classes.forEach(function(clas){
+        var tem = NqsClass.findOne({"abrev":clas},{"name":1});
+        hmm.push(tem.name);
+      })
+    }
+    return hmm;
+  }
+
+
   /*
    * Example:
    *  items: function () {

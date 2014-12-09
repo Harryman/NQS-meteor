@@ -2,14 +2,16 @@
     <div class="ui secondary segment">
         <div class="ui grid">
             <div class="right floated six wide column">
-                <input type="text" id="dateRange" value="{{yearMin}} - {{yearMax}}" readonly style="border:0; background-color:#FAF9FA; ">
                 <div id="dateSlider"></div>
+            </div>
+            <div class="right aligned ten wide column">
+                <input type="text" id="dateRange" size="10" value="{{yearMin}} - {{yearMax}}" readonly style="border:0; background-color:#FAF9FA;">
             </div>
         </div>
     </div>
     <div class="ui segment">
-    {{#each allEvents}}
-    	{{> Event}}
-    {{/each}}
+        {{#each allEvents}} 
+        	{{> Event}} 
+    	{{/each}}
     </div>
 </template>

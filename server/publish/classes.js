@@ -1,9 +1,7 @@
 /*****************************************************************************/
-/* Global CSS Styles */
+/* Classes Publish Functions
 /*****************************************************************************/
-a{
-	color: black;
-}
-a:hover{
-	color:#665;
-}
+
+Meteor.publish('classes', function () {
+	return NqsClass.find();
+});

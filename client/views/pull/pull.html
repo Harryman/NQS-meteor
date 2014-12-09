@@ -1,3 +1,89 @@
 <template name="Pull">
-  client/views/pull/pull.html
+    <div class="ui segment">
+        <h2>{{city}}, {{state}}</h2>
+        <div class="ui very relaxed list">
+            <div class="item">
+                <i class="map large icon"></i>
+                <div class="content">
+                    <div class="header">Where</div>
+                    {{#if location}}
+                    	<a href="https://www.google.com/maps/?q={{location}}">
+						<b><u>{{location}}</u></b></a>
+					{{else}}
+						<a href="https://www.google.com/maps/?q={{city}}, {{state}}"><b><u>{{city}}, {{state}}</u></b></a>
+					{{/if}}
+                </div>
+            </div>
+            <div class="item">
+                <i class="calendar large icon"></i>
+                <div class="content">
+                    <div class="header">When</div>
+                    {{pullDate}}
+                </div>
+            </div>
+            {{#if contact}}
+            <div class="item">
+            	<i class="floated top info circle large icon"></i>
+                <div class="content">
+                    <div class="header">Contact Info</div>
+                </div>
+                <div class="ui horizontal list">
+                {{#each contact}}
+                    <div class="ui item">
+                        <div class="ui label">
+                            {{#if this.name}}
+                            <i class="user icon"></i>
+                            	{{this.name}}
+                            {{/if}}
+                            {{#if this.phone}}
+                            <i class="call icon"></i>
+                            	{{this.phone}}
+                            {{/if}}
+                            {{#if this.url}}
+                            <i class="world icon"></i>
+                            	<a href="http://{{this.url}}">{{this.url}}</a>
+                        	{{/if}}
+                        </div>
+                    </div>
+                {{/each}}
+                </div>
+            </div>
+            {{/if}} 
+            {{#if classes}}
+            <div class="item">
+                <i class="checkered flag large icon"></i>
+                <div class="content">
+                    <div class="header">Classes</div>
+                </div>
+                <div class="ui horizontal list">
+                    {{#each classConvert}}
+                    <div class="ui item">
+                    	<div class="ui label">
+                        {{this}}
+                    	</div>
+                    	</div>
+                    {{/each}}
+                    </div>
+            </div>
+            {{/if}}
+            {{#if resultURL}}
+            <div class="item">
+            	<i class="trophy large icon"></i>
+            	<div class="content">
+            		<div class="header">Final Standings</div>
+            	</div>
+            	<div class="ui list">
+            	<div class="item">
+            		<a href="{{resultURL}}"><div class="ui button">Event Results</div></a>
+            		</div>
+            		{{#if pointsURL}}
+            		<div class="item">
+            			<a href="{{pointsURL}}"><div class="ui button">Points Standings after Event</div></a>
+            			</div>
+            		{{/if}}
+            		</div>
+        	</div>
+        	{{/if}}
+        </div>
+    </div>
 </template>
