@@ -12,5 +12,5 @@ Meteor.publish('all_events', function (match,options) {
 	return NqsEvent.find(match,options);
 });
 Meteor.publish('home', function(){
-	return NqsEvent.find({"query":{},"orderby":{"posted":-1},"limit":10});
+	return NqsEvent.find({"query":{},"orderby":{"posted":-1}});
 })
