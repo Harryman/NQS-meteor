@@ -19,7 +19,7 @@ Router.route('/rules/:file',function(){
 	{
 		where:"server"
 	});
-Router.route('/results/:ka/:mai/:file',function(){
+Router.route('/results/:ka/:mai/:ha',function(){
 	this.response.end();
 	},
 	{
@@ -35,3 +35,4 @@ Router.route('/Event/:_id', {
 	name: 'pull',
 	template: 'Pull'
 	});
+Router.route('/post', {name: 'post'});

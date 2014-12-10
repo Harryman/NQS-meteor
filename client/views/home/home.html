@@ -1,3 +1,12 @@
 <template name="Home">
-  client/views/home/home.html
+	<div class="ui segment">
+		{{#each entries}}
+			{{#if typeIs "post"}}
+				{{> Post}}
+			{{/if}}
+			{{#if typeIs "event"}}
+				{{> Event}}
+			{{/if}}
+		{{/each}}
+	</div>
 </template>

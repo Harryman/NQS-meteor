@@ -1,0 +1,14 @@
+<template name="Post">
+	<div class="ui vertical segment">
+		<a href="/Post/{{_id._str}}">
+		<div class="ui secondary segment">
+			<div class="ui horizontal header divider">
+				{{title}}
+			</div>
+		</div>
+		</a>{{#markdown}}
+		{{formatBody}}
+		{{/markdown}}
+		<div class="ui label">{{postedDate}}</div>
+	</div>
+</template>

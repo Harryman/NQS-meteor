@@ -11,12 +11,12 @@ Template.Home.events({
 });
 
 Template.Home.helpers({
-  /*
-   * Example:
-   *  items: function () {
-   *    return Items.find();
-   *  }
-   */
+  entries: function(){
+    return NqsEvent.find();
+  },
+  typeIs: function(type){
+    return this.type === type; 
+  }
 });
 
 /*****************************************************************************/
