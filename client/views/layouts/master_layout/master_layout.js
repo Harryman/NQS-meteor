@@ -27,6 +27,7 @@ Template.MasterLayout.created = function () {
 
 Template.MasterLayout.rendered = function () {
     this.$('.dropdown').dropdown();
+    document.title = "NQS Pulling"
 };
 
 Template.MasterLayout.destroyed = function () {

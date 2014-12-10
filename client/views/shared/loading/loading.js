@@ -23,10 +23,12 @@ Template.Loading.helpers({
 /* Loading: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Loading.created = function () {
+  document.title = "Loading"
 };
 
 Template.Loading.rendered = function () {
 };
 
 Template.Loading.destroyed = function () {
+  document.title = "NQS Pulling"
 };
