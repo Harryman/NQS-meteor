@@ -1,7 +1,7 @@
 /*****************************************************************************/
-/* Home: Event Handlers and Helpersss .js*/
+/* Archives: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.Home.events({
+Template.Archives.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -10,23 +10,23 @@ Template.Home.events({
    */
 });
 
-Template.Home.helpers({
-  entries: function(){
-    return NqsEvent.find({},{sort:{"posted":-1}});
-  },
-  typeIs: function(type){
-    return this.type === type; 
-  }
+Template.Archives.helpers({
+  /*
+   * Example:
+   *  items: function () {
+   *    return Items.find();
+   *  }
+   */
 });
 
 /*****************************************************************************/
-/* Home: Lifecycle Hooks */
+/* Archives: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Home.created = function () {
+Template.Archives.created = function () {
 };
 
-Template.Home.rendered = function () {
+Template.Archives.rendered = function () {
 };
 
-Template.Home.destroyed = function () {
+Template.Archives.destroyed = function () {
 };

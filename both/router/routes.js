@@ -35,4 +35,13 @@ Router.route('/Event/:_id', {
 	name: 'pull',
 	template: 'Pull'
 	});
-Router.route('/post', {name: 'post'});
+Router.route('/Post/:_id', {name: 'post'});
+Router.route('/Archives', {
+	name: 'archives',
+	template: 'ComingSoon'});
+Router.route('/Contact', {
+	name: 'contact',
+	template: 'ComingSoon'});
+Router.route('/About', {
+	name: 'about',
+	template:'ComingSoon'});
