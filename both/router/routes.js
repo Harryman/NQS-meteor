@@ -31,14 +31,19 @@ Router.route('/points/:la/:te/:da',function(){
 	{
 		where:"server"
 	});
+Router.route('/Archives/:file',function(){
+	this.response.end();
+	},
+	{
+		where:"server"
+	});
 Router.route('/Event/:_id', {
 	name: 'pull',
 	template: 'Pull'
 	});
 Router.route('/Post/:_id', {name: 'post'});
 Router.route('/Archives', {
-	name: 'archives',
-	template: 'ComingSoon'});
+	name: 'archives'});
 Router.route('/Contact', {
 	name: 'contact',
 	template: 'ComingSoon'});
