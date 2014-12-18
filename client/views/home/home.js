@@ -12,7 +12,7 @@ Template.Home.events({
 
 Template.Home.helpers({
   entries: function(){
-    return NqsEvent.find({},{sort:{"posted":-1}});
+    return NqsEvent.find();
   },
   typeIs: function(type){
     return this.type === type; 
