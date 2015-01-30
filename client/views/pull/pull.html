@@ -29,26 +29,40 @@
                 </div>
                 <div class="ui horizontal list">
                 {{#each contact}}
-                    <div class="ui item">
-                        <div class="ui label">
-                            {{#if this.name}}
+                    {{#itemWrapper}}
+                        {{#if this.name}}
                             <i class="user icon"></i>
-                            	{{this.name}}
-                            {{/if}}
-                            {{#if this.phone}}
+                        	{{this.name}}
+                        {{/if}}
+                        {{#if this.phone}}
                             <i class="call icon"></i>
-                            	{{this.phone}}
-                            {{/if}}
-                            {{#if this.url}}
+                        	{{this.phone}}
+                        {{/if}}
+                        {{#if this.url}}
                             <i class="world icon"></i>
-                            	<a href="http://{{this.url}}">{{this.url}}</a>
-                        	{{/if}}
-                        </div>
-                    </div>
+                        	<a href="https://{{this.url}}">{{this.url}}</a>
+                      	{{/if}}
+                    {{/itemWrapper}}
                 {{/each}}
                 </div>
             </div>
-            {{/if}} 
+            {{/if}}
+            {{#if files}}
+                <div class="item">
+                    <i class="file outline large icon"></i>
+                    <div class="content">
+                        <div class="header">Related Files</div>
+                    </div>
+                    <div class="ui horizontal list">
+                        {{#each files}}
+                            {{#itemWrapper}}
+                                <i class="{{fileTypeIcon this.url}}"></i>
+                                <a href="https://{{this.url}}">{{this.title}}</a>
+                            {{/itemWrapper}}
+                        {{/each}}
+                    </div>
+                </div>
+            {{/if}}
             {{#if classes}}
             <div class="item">
                 <i class="checkered flag large icon"></i>
@@ -93,6 +107,14 @@
         		</div>
         	</div>
         	{{/if}}
+        </div>
+    </div>
+</template>
+
+<template name="itemWrapper">
+    <div class="ui item">
+        <div class="ui label">
+        {{> UI.contentBlock}}
         </div>
     </div>
 </template>
