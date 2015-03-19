@@ -1,4 +1,5 @@
 <template name="Pull">
+<title>{{city}}, {{state}}</title>
     <div class="ui segment">
         <h2>{{city}}, {{state}}</h2>
         <div class="ui very relaxed list">
@@ -40,7 +41,7 @@
                         {{/if}}
                         {{#if this.url}}
                             <i class="world icon"></i>
-                        	<a href="https://{{this.url}}">{{this.url}}</a>
+                        	<a href="http://{{this.url}}">{{this.url}}</a>
                       	{{/if}}
                     {{/itemWrapper}}
                 {{/each}}
@@ -57,7 +58,7 @@
                         {{#each files}}
                             {{#itemWrapper}}
                                 <i class="{{fileTypeIcon this.url}}"></i>
-                                <a href="https://{{this.url}}">{{this.title}}</a>
+                                <a href="http://{{this.url}}">{{this.title}}</a>
                             {{/itemWrapper}}
                         {{/each}}
                     </div>
