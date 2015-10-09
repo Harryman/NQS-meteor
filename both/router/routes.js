@@ -37,6 +37,12 @@ Router.route('/entryForm/:foo/:bar',function(){
 	{
 		where:"server"
 	});
+Router.route('/file/:file',function(){
+	this.response.end();
+	},
+	{
+		where:"server"
+	});
 Router.route('/Event/:_id', {
 	name: 'pull',
 	template: 'Pull'

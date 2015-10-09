@@ -22,7 +22,6 @@ Template.Post.helpers({
   },
   formatBody: function(){
     var blah = this.body.valueOf()
-    console.log(blah);
     return blah
   }
 });

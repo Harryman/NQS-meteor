@@ -12,5 +12,11 @@ Meteor.publish('all_events', function (match,options) {
 	return NqsEvent.find(match,options);
 });
 Meteor.publish('home', function(){
-	return NqsEvent.find({"query":{},"orderby":{"posted":-1}});
+	var now = new Date();
+    var st  = now.getFullYear();
+    st = st - 2;
+    //st = st+"-01-01T00:00:00Z"
+    var da = new Date();
+    da.setFullYear(st);
+	return NqsEvent.find({"query":{"posted":{$gte:da}},"orderby":{"posted":-1}});
 })
