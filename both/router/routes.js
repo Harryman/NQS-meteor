@@ -31,6 +31,12 @@ Router.route('/points/:la/:te/:da',function(){
 	{
 		where:"server"
 	});
+Router.route('/entryForm/:foo/:bar',function(){
+	this.response.end();
+	},
+	{
+		where:"server"
+	});
 Router.route('/Event/:_id', {
 	name: 'pull',
 	template: 'Pull'
